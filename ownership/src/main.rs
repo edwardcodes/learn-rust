@@ -51,6 +51,16 @@ fn main() {
     // borrow of moved value: `heap_vec`value borrowed here after move
     // use `&mut` if you want to update the value
     println!("The value inside the main fn of heap_vec: {:?}", heap_vec);
+
+    let large_data_1 = String::from("This is first long string");
+    let large_data_2 = String::from("This is seconf long string");
+
+    let combined_data = vec![&large_data_1, &large_data_2];
+    // use vec! for better memory instead of combining in traditional way
+    println!("combined data: {:#?}",combined_data);
+
+
+
 }
 
 fn stack_fn(mut var: i32) {
