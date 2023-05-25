@@ -49,4 +49,30 @@ fn main() {
         _ => "Exam ku poniya ne?", // show this none matches
     };
     println!("My mom comments_updated: {}", mom_comments);
-}
+
+    // while loop
+    let mut number = String::new();
+
+    std::io::stdin()
+    .read_line(&mut number)
+    .expect("failed to read input");
+
+    let mut number:u8 = number.trim().parse().expect("invalid type");
+
+    number += 1; 
+    // to avoid displaying number given is already div by 2 & 5
+    // it will show next number
+    while (number % 2 == 0 && number % 5 == 0) != true {
+        number += 1;
+    };
+    println!("The number after your no divisible by 2 & 5 is {}",number);
+
+    // for loop
+    
+    let mut some_vec = vec![4,5,6,7,8];
+
+    for i in 0..some_vec.len() {
+        println!("The value of index {} position is {}",i,some_vec[i]);
+    }
+
+    println!("{:#?}",some_vec);
