@@ -43,5 +43,8 @@ fn main() {
     // check whether value are present
     println!("Checking whether -10 is present: {:?}",number_vec.contains(&-10));
 
-
+    // iterator and enumerate
+    for (idx,value)in number_vec.iter().enumerate() {
+        println!("Actual value at index {} is {}",idx,value);
+    }
 }
